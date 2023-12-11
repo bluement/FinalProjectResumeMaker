@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Entity.Migrations.Model;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity.Migrations.Model;
-using System.Data.SQLite;
+
 
 namespace FinalProjectResumeMaker
 {
@@ -13,7 +14,7 @@ namespace FinalProjectResumeMaker
     {
             static readonly string conString = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             static readonly CategoryDBHandler instance = new CategoryDBHandler();
-
+            
 
 
             private CategoryDBHandler()
@@ -22,35 +23,52 @@ namespace FinalProjectResumeMaker
 
                 Category newp1 = new Category
                 {
+                    Id = 1,
                     FirstName = "Jude ",
                     LastName = "Bellingham",
+                    Age = 20,
                     City = "Madrid",
-                    Age = 20
+                    Address="123 main Street",
+                    Email="jude.bellingham@gmail.com",
+                    Phone="555-123-4567"
+                   
                 };
                 Category newp2 = new Category
                 {
-                    FirstName = "Cristiano",
-                    LastName = "Ronaldo",
-                    City = "Lisbon",
-                    Age = 38
+                    Id = 2,
+                    FirstName = "Jude ",
+                    LastName = "Bellingham",
+                    Age = 20,
+                    City = "Madrid",
+                    Address = "123 main Street",
+                    Email = "jude.bellingham@gmail.com",
+                    Phone = "555-123-4567"
                 };
 
 
                 Category newp3 = new Category
                 {
-                    FirstName = "Masonount",
-                    LastName = "MountMason",
-                    City = "Manchester",
-                    Age = 24
+                    Id = 3,
+                    FirstName = "Jude ",
+                    LastName = "Bellingham",
+                    Age = 20,
+                    City = "Madrid",
+                    Address = "123 main Street",
+                    Email = "jude.bellingham@gmail.com",
+                    Phone = "555-123-4567"
                 };
 
 
                 Category newp4 = new Category
                 {
-                    FirstName = "Vinicius ",
-                    LastName = "Junior",
+                    Id = 4,
+                    FirstName = "Jude ",
+                    LastName = "Bellingham",
+                    Age = 20,
                     City = "Madrid",
-                    Age = 22
+                    Address = "123 main Street",
+                    Email = "jude.bellingham@gmail.com",
+                    Phone = "555-123-4567"
                 };
 
                 AddCategory(newp1);
