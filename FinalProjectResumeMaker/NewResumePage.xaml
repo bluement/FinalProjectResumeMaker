@@ -6,29 +6,69 @@
         xmlns:local="clr-namespace:FinalProjectResumeMaker"
         mc:Ignorable="d"
         Title="NewResumePage" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="50"/>
             <RowDefinition Height="100"/>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+          
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0" Margin="10">Edit</Button>
-        <Button Grid.Column="1" Margin="10">View</Button>
-        <Button Grid.Column="2" Margin="10">Export to PDF File</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="1" Grid.ColumnSpan="3" Margin="10">Title</TextBox>
-        <Label Grid.Column="0" Grid.Row="2" Margin="20" >Objective</Label>
-        <Label Grid.Column="0" Grid.Row="3" Margin="20">Education</Label>
-        <Label Grid.Column="0" Grid.Row="4" Margin="20">Competences</Label>
-        <Button Grid.Column="0" Grid.Row="5" Margin="20">+ New Category</Button>
+       
+        <Button Content="Edit" Grid.Row="0" Grid.Column="0" />
+        <Button Content="View" Grid.Row="0" Grid.Column="1" />
+        <Button Content="Export to PDF" Grid.Row="0" Grid.Column="2"/>
+
+     
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">Resume Title</TextBox>
+
+
+        <TextBlock Text="Work Experience" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+        <ListView Name="lvWorkExperience" Grid.Row="2" Grid.Column="1">
+
+        </ListView>
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical">
+            <Button Content="Add" Click="AddWorkExperience_Click"/>
+            <Button Content="Edit" Click="EditWorkExperience_Click"/>
+            <Button Content="Delete" Click="DeleteWorkExperience_Click"/>
+        </StackPanel>
+
+  
+        <TextBlock Text="Education" FontWeight="Bold" Grid.Row="3" Grid.Column="0"/>
+        <ListView Name="lvEducation" Grid.Row="3" Grid.Column="1">
+ 
+        </ListView>
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
+            <Button Content="Add" Click="AddEducation_Click"/>
+            <Button Content="Edit" Click="EditEducation_Click"/>
+            <Button Content="Delete" Click="DeleteEducation_Click"/>
+        </StackPanel>
+
+
+        <TextBlock Text="Contact Information" FontWeight="Bold" Grid.Row="4" Grid.Column="0"/>
+        <ListView Name="lvContactInfo" Grid.Row="4" Grid.Column="1">
+  
+        </ListView>
+        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Vertical">
+            <Button Content="Add" Click="AddContactInfo_Click"/>
+            <Button Content="Edit" Click="EditContactInfo_Click"/>
+            <Button Content="Delete" Click="DeleteContactInfo_Click"/>
+        </StackPanel>
+
+        <Button Content="Add New Category" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Click="AddNewCategory_Click"/>
     </Grid>
 </Window>
