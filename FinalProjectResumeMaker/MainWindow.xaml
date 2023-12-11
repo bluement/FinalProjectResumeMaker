@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="68" Margin="274,123,0,0" VerticalAlignment="Top" Width="222"/>
+        <Button Content="Resume Builder" HorizontalAlignment="Center" Height="68" Margin="0,68,0,0" VerticalAlignment="Top" Width="222" Click="Button_Click"/>
+        <Button Content="Load" Click="LoadResumeButton_Click" HorizontalAlignment="Left" Margin="162,260,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="New" Click="NewResumeButton_Click" HorizontalAlignment="Left" Margin="493,260,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
     </Grid>
 </Window>
