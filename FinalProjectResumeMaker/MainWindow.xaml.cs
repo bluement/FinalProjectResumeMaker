@@ -23,7 +23,9 @@ namespace FinalProjectResumeMaker
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string message = "You can load or create your resume. You can also convert it to pdf.";
+            string title = "Resume Builder Information";
+            MessageBox.Show(message, title);
         }
     }
 }
