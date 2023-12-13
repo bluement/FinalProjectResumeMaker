@@ -21,7 +21,7 @@ namespace FinalProjectResumeMaker
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ResumeInformationButton_Click(object sender, RoutedEventArgs e)
         {
             string message = "You can load or create your resume. You can also convert it to pdf.";
             string title = "Resume Builder Information";
