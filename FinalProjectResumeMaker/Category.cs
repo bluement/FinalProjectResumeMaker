@@ -20,7 +20,7 @@ namespace FinalProjectResumeMaker
 
         public override string ToString()
         {
-            string formatted = String.Format("{0}\t {1}\t  {2}\t  {3}\t {4}", Id, FirstName, LastName, Age, City, Address, Phone, Email);
+            string formatted = String.Format("{0}\t {1}\t  {2}\t  {3}\t {4}\t {5}\t  {6}\t  {7}\t {8}", Id, FirstName, LastName, Age, City, Address, Phone, Email);
             return formatted;
         }
     }
